@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import styles from './SplashScreen.module.css'
+import styles from './Preloader.module.css'
 import icon from '../../assets/skilletCooktop.svg'
 import { preLoaderAnim } from "../../animations";
 
