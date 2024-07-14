@@ -2,9 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from './SubmitButton.module.css';
 
-const SubmitButton = ({ className, disabled, onClick, children }) => {
+const SubmitButton = ({ className = '', disabled = false, children }) => {
     return (
-        <button className={`${styles.submitBtn} ${className}`} disabled={disabled} onClick={onClick}>
+        <button className={`${styles.submitBtn} ${className}`} type="submit" disabled={disabled}>
             {children}
         </button>
     );
@@ -13,13 +13,7 @@ const SubmitButton = ({ className, disabled, onClick, children }) => {
 SubmitButton.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool,
-    onClick: PropTypes.func.isRequired,
     children: PropTypes.node.isRequired,
-};
-
-SubmitButton.defaultProps = {
-    className: '',
-    disabled: false,
 };
 
 export default SubmitButton;

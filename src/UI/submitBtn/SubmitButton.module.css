@@ -17,7 +17,7 @@
 }
 
 .submitBtn:disabled {
-    background-color: #8A8A8A; /* Light gray when disabled */
-    color: #FAFAFA; /* Lighter text color when disabled */
+    background-color: #8A8A8A;
+    color: #FAFAFA;
     cursor: not-allowed;
 }
