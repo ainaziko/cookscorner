@@ -9,7 +9,6 @@ const TextInput = ({ id, name, type, value, placeholder, onChange, onBlur, error
     const visibility = useSelector(state => state.visibility);
     const isPassword = type === "password";
 
-
     return (
         <div className={styles.textInput}>
             <p className={styles.placeholderText}>{placeholder}</p>
