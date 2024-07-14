@@ -18,7 +18,7 @@ const InputIcon = ({ icons }) => {
         <div className={styles.svgContainer}>
             {Icon1Component ? (
                 <span className={styles.icon} onClick={Icon2Component ? updateVisibility : undefined}>
-                    {Icon2Component ? (visibility ? <Icon2Component /> : <Icon1Component />) : <Icon1Component />}
+                    {Icon2Component ? (visibility ? <Icon1Component /> : <Icon2Component />) : <Icon1Component />}
                 </span>
             ) : (
                 <span className={styles.icon}></span>

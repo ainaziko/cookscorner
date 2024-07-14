@@ -5,8 +5,10 @@ import InputIcon from "../../UI/inputIcon/InputIcon";
 import { useSelector } from "react-redux";
 
 
-const TextInput = ({ id, name, value, placeholder, onChange, onBlur, error, icons }) => {
+const TextInput = ({ id, name, type, value, placeholder, onChange, onBlur, error, icons }) => {
     const visibility = useSelector(state => state.visibility);
+    const isPassword = type === "password";
+
 
     return (
         <div className={styles.textInput}>
@@ -19,7 +21,7 @@ const TextInput = ({ id, name, value, placeholder, onChange, onBlur, error, icon
                 placeholder={`Enter your ${placeholder}`}
                 onChange={onChange}
                 onBlur={onBlur}
-                type={visibility ? "text" : "password"}
+                type={isPassword && visibility ? "text" : type}
             />
             <InputIcon icons={icons} />
             {error && <p className={styles.errorMsg}>- {error}</p>}
@@ -36,7 +38,7 @@ TextInput.propTypes = {
     onChange: PropTypes.func.isRequired,
     onBlur: PropTypes.func.isRequired,
     error: PropTypes.string,
-    icon: PropTypes.arrayOf(PropTypes.elementType), // Correct PropTypes definition for icon
+    icon: PropTypes.arrayOf(PropTypes.elementType),
 };
 
 export default TextInput;

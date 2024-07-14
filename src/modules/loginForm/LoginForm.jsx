@@ -31,6 +31,7 @@ const LoginForm = () => {
                 <TextInput
                     id="email"
                     name="email"
+                    type="text"
                     value={values.email}
                     placeholder="Gmail"
                     onChange={handleChange}
@@ -40,6 +41,7 @@ const LoginForm = () => {
                 <TextInput
                     id="password"
                     name="password"
+                    type="password"
                     value={values.password}
                     placeholder="Password"
                     onChange={handleChange}
